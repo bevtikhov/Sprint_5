@@ -4,12 +4,14 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.ui import WebDriverWait
 import generator
 from locators import TestLocators
+from urls import URLs
 
 def test_registration_valid_data_success(driver):
     username = generator.username
     email = generator.email
     password = generator.password
-    driver.get("https://stellarburgers.nomoreparties.site/register")
+    register = URLs.register
+    driver.get(register)
     driver.find_element(*TestLocators.name).send_keys(username)
     driver.find_element(*TestLocators.email).send_keys(email)
     driver.find_element(*TestLocators.password).send_keys(password)
@@ -21,7 +23,8 @@ def test_registration_no_name_failed(driver):
     email = generator.email
     password = generator.password
     empty = ''
-    driver.get("https://stellarburgers.nomoreparties.site/register")
+    register = URLs.register
+    driver.get(register)
     driver.find_element(*TestLocators.name).send_keys(empty)
     driver.find_element(*TestLocators.email).send_keys(email)
     driver.find_element(*TestLocators.password).send_keys(password)
@@ -33,7 +36,8 @@ def test_registration_incorrect_email_failed(driver):
     username = generator.username
     incorrect_email = generator.incorrect_email
     password = generator.password
-    driver.get("https://stellarburgers.nomoreparties.site/register")
+    register = URLs.register
+    driver.get(register)
     driver.find_element(*TestLocators.name).send_keys(username)
     driver.find_element(*TestLocators.email).send_keys(incorrect_email)
     driver.find_element(*TestLocators.password).send_keys(password)
@@ -45,7 +49,8 @@ def test_registration_incorrect_password_failed(driver):
     username = generator.username
     email = generator.email
     incorrect_password = generator.incorrect_password
-    driver.get("https://stellarburgers.nomoreparties.site/register")
+    register = URLs.register
+    driver.get(register)
     driver.find_element(*TestLocators.name).send_keys(username)
     driver.find_element(*TestLocators.email).send_keys(email)
     driver.find_element(*TestLocators.password).send_keys(incorrect_password)
