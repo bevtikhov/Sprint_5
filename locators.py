@@ -1,0 +1,27 @@
+from selenium.webdriver.common.by import By
+
+class TestLocators:
+    name = By.XPATH, '/html/body/div/div/main/div/form/fieldset[1]/div/div/input' # Поле "Имя" на странице "Регистрация"
+    email = By.XPATH, '/html/body/div/div/main/div/form/fieldset[2]/div/div/input' # Поле "Email" на странице "Регистрация"
+    password = By.XPATH, '/html/body/div/div/main/div/form/fieldset[3]/div/div/input' # Поле "Пароль" на странице "Регистрация"
+    register_button = By.XPATH, '//button[text() = "Зарегистрироваться"]' # Кнопка "Зарегистрироваться" на странице "Регистрация"
+    recovery_password_button = By.XPATH, '//a[text() = "Восстановить пароль"]' # Кнопка восстановления пароля на странице "Вход"
+    incorrect_password_alert = By.XPATH, '/html/body/div/div/main/div/form/fieldset[3]/div/p' # Ошибка некорректного пароля на странице "Регистрация"
+    login_button_on_main_page = By.XPATH, '/html/body/div/div/main/section[2]/div/button' # Кнопка "Войти в аккаунт" на главной странице
+    login_email = By.XPATH, '/html/body/div/div/main/div/form/fieldset[1]/div/div/input' # Поле "Email" на странице "Вход"
+    login_password = By.XPATH, '/html/body/div/div/main/div/form/fieldset[2]/div/div/input' # Поле "Пароль" на странице "Вход"
+    login_button = By.XPATH, '/html/body/div/div/main/div/form/button' # Кнопка "Войти" на странице "Вход"
+    order_button = By.XPATH, '/html/body/div/div/main/section[2]/div/button' # Кнопка "Оформить заказ" в разделе "Конструктор"
+    personal_account_button = By.XPATH, '/html/body/div/div/header/nav/a' # Кнопка "Личный кабинет"
+    save_button = By.XPATH, '/html/body/div/div/main/div/div/div/div/button[2]' # Кнопка "Сохранить" в разделе "Личный кабинет"
+    profile_button = By.XPATH, '/html/body/div/div/main/div/nav/ul/li[1]/a' # Кнопка "Профиль" в разделе "Личный кабинет"
+    login_button_on_registration_page = By.XPATH, '/html/body/div/div/main/div/div/p/a' # Кнопка "Войти" на странице "Регистрация"
+    forgot_password_button = By.XPATH, '/html/body/div/div/main/div/div/p[2]/a' # Кнопка "Восстановить пароль" на странице "Вход"
+    constructor_button = By.XPATH, '/html/body/div/div/header/nav/ul/li[1]/a/p' # Кнопка раздела "Конструктор"
+    constructor_burger_h1 = By.XPATH, '/html/body/div/div/main/section[1]/h1' # Заголовок раздела "Конструктор"
+    logo_burgers = By.XPATH, '/html/body/div/div/header/nav/div/a' # Логотип "Stellar Burgers"
+    logout_button = By.XPATH, '/html/body/div/div/main/div/nav/ul/li[3]/button' # Кнопка "Выход" в разделе "Личный кабинет"
+    register_button_on_login_page = By.XPATH, '/html/body/div/div/main/div/div/p[1]/a' # Кнопка "Зарегистрироваться" на странице "Вход"
+    bun_button = By.XPATH, '/html/body/div/div/main/section[1]/div[1]/div[1]' # Раздел "Булки"
+    sauce_button = By.XPATH, '/html/body/div/div/main/section[1]/div[1]/div[2]' # Раздел "Соусы"
+    filling_button = By.XPATH, '/html/body/div/div/main/section[1]/div[1]/div[3]' # Раздел "Начинки"
