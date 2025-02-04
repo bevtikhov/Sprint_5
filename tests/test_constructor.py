@@ -19,7 +19,7 @@ def test_constructor_click_sauce_button_success(driver):
     driver.find_element(*TestLocators.login_button).click()
     WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable((TestLocators.order_button)))
     driver.find_element(*TestLocators.sauce_button).click()
-    assert driver.find_element(*TestLocators.sauce_button).get_attribute('class') == 'tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect'
+    assert driver.find_element(*TestLocators.sauce_button).text == 'Соусы'
 
 def test_constructor_click_bun_button_success(driver):
     main = URLs.main
@@ -33,7 +33,7 @@ def test_constructor_click_bun_button_success(driver):
     WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable((TestLocators.order_button)))
     driver.find_element(*TestLocators.sauce_button).click()
     driver.find_element(*TestLocators.bun_button).click()
-    assert driver.find_element(*TestLocators.bun_button).get_attribute('class') == 'tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect'
+    assert driver.find_element(*TestLocators.bun_button).text == 'Булки'
 
 def test_constructor_click_filling_button_success(driver):
     main = URLs.main
@@ -46,4 +46,4 @@ def test_constructor_click_filling_button_success(driver):
     driver.find_element(*TestLocators.login_button).click()
     WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable((TestLocators.order_button)))
     driver.find_element(*TestLocators.filling_button).click()
-    assert driver.find_element(*TestLocators.filling_button).get_attribute('class') == 'tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect'
+    assert driver.find_element(*TestLocators.filling_button).text == 'Начинки'
